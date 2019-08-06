@@ -20,7 +20,7 @@ class TestController extends BaseController
     	return view('submitPage');
     }
 
-    public function articalList(Request $request){
+    public function mList(Request $request){
     	$articals = new Artical();
 
     	$result = $articals -> create($request -> all());
@@ -33,7 +33,7 @@ class TestController extends BaseController
     	// );
 
     	// dd($result);
-        return view('articalList');
+        return view('mList');
 
     }
 
@@ -46,7 +46,7 @@ class TestController extends BaseController
 
     public function articals(){
     	//展示视图
-		return view('articalList');
+		return view('mList');
 		
 	}
 

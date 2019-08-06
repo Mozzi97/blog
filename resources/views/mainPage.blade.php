@@ -9,6 +9,7 @@
         <!-- Fonts -->
         <link href="https://fonts.googleapis.com/css?family=Nunito:200,600" rel="stylesheet">
 
+        <link href="public/css/base.css" rel="stylesheet">
 
         <link href="https://fonts.googleapis.com/css?family=Shadows+Into+Light&display=swap" rel="stylesheet">
 
@@ -98,8 +99,10 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ route('articalList') }}">Blog</a>
+                    <a href="{{ route('articals') }}">Blog</a>
+                    <!--
                     <a href="{{ route('articals') }}">Feedback</a>
+                    -->
                     <a href="{{ url('home/test/submitPage') }}">New article</a>
                     <a href="{{ url('home/test/myself') }}">About me</a>
                     <a href="https://github.com/Mozzi97/blog">GitHub</a>
