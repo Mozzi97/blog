@@ -98,11 +98,11 @@
                 </div>
 
                 <div class="links">
-                    <a href="{{ route('articals') }}">Blog</a>
+                    <a href="{{ route('articalList') }}">Blog</a>
                     <a href="{{ route('articals') }}">Feedback</a>
                     <a href="{{ url('home/test/submitPage') }}">New article</a>
-                    <a href="https://laravel-news.com">About me</a>
-                    <a href="https://github.com/laravel/laravel">GitHub</a>
+                    <a href="{{ url('home/test/myself') }}">About me</a>
+                    <a href="https://github.com/Mozzi97/blog">GitHub</a>
                 </div>
             </div>
         </div>

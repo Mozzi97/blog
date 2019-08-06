@@ -27,6 +27,7 @@ class CreateUsersTable extends Migration
         Schema::create('samp_db', function (Blueprint $table)  {
             $table->string('title');
             $table->string('article');
+            $table->timestamps();
         });
     }
 

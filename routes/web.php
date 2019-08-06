@@ -17,8 +17,10 @@
 
 Route::get('/', function () {
     return view('mainPage');
-});
+})->name('mainPage');
 
 Route::any('home/test/submitPage', 'TestController@submitPage');
-Route::any('home/test/articalList', 'TestController@submit')->name('articalList');
+Route::any('home/test/articalList', 'TestController@articalList')
+														->name('articalList');
 Route::get('home/test/articals', 'TestController@articals')->name('articals');
+Route::get('home/test/myself', 'TestController@aboutMe');
