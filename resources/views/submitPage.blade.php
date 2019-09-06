@@ -35,6 +35,7 @@
 
             .container-fluid{
                 background-color: rgba(255,255,255,0.6);
+                border-radius:15px;
                 size: 400px,900px;
                 display: block;
 

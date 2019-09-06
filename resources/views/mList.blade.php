@@ -30,6 +30,15 @@
 
             .box{
                 background-color: rgba(255,255,255,0.4);
+                border-radius:15px;
+            }
+
+            .page{
+                background-color: rgba(255,255,255,0.4);
+                margin-left:auto; 
+                margin-right: auto;
+                margin:0 auto;
+                width:1px;
             }
         </style>
 
@@ -47,13 +56,16 @@
         <div class="container container-fluid">
             @foreach ($data as $val)
                 <div class="box">
-                    <h2>{{ $val -> title }}</h2>
-                    <p style="margin-left: 20px">{{ $val -> article }}</p>
+                    <h2 style="margin-left: 20px">{{ $val -> title }}</h2>
+                    <p style="margin-left: 40px">{{ $val -> article }}</p>
                 </div>
                 <br />
             @endforeach
-                  
+            
         </div>
+            <div class="page">      
+                {{ $data -> links() }}
+            </div>
 
 
     </body>

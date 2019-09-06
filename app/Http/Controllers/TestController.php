@@ -51,7 +51,7 @@ class TestController extends BaseController
 
         $db = DB::table('samp_db');
 
-        $data = $db -> get();
+        $data = $db -> paginate(5);
 
         $date = date('Y-m-d H:i:s',time());
 
