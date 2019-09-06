@@ -27,10 +27,11 @@
                 height: 100vh;
                 margin: 0;
             }
-
+            
             .full-height {
                 height: 100vh;
             }
+            
 
             .flex-center {
                 align-items: center;
@@ -75,6 +76,14 @@
                 */
                 font-family: 'Shadows Into Light', cursive;
             }
+
+            .friend{
+                float: right;
+                margin-top: 90px;
+                margin-right: -60px;
+                
+            }
+
         </style>
     </head>
     <body>
@@ -93,6 +102,7 @@
                 </div>
             @endif
 
+
             <div class="content">
                 <div class="title m-b-md">
                     Welcome to Mozzi's blog
@@ -107,7 +117,16 @@
                     <a href="{{ url('home/test/myself') }}">About me</a>
                     <a href="https://github.com/Mozzi97/blog">GitHub</a>
                 </div>
+            
+            <div class="friend">
+                <h3 class="text-right" style="margin-right: 10px;">友链:</h3>
+                <a class="text-right" href="https://starlite.me/" style="margin-right: -30px; font-size: 20px ">太一</a>
+                <br />
+                <a class="text-right" href="https://glyphicons.com/" style="margin-right: -80px; font-size: 20px">Glyphicons</a>
             </div>
+
+            </div>
+            </div>  
         </div>
     </body>
 </html>

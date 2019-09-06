@@ -14,6 +14,7 @@
 
         <link href="https://fonts.googleapis.com/css?family=Darker+Grotesque&display=swap" rel="stylesheet">
 
+        <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
 
         <!-- Styles -->
         <style>
@@ -26,12 +27,33 @@
                 height: 100vh;
                 margin: 0;
             }
+
+            .box{
+                background-color: rgba(255,255,255,0.4);
+            }
         </style>
 
         
     </head>
     <body>
-    	<p>Submitted</p>
+        <div align="right">
+            <button type="button" class="btn btn-info" onclick="window.location.href='/'">Back to Main Page</button>
+        </div>
+
+        <div class="container container-fluid" id="content">
+            <p>现在时间 {{$date}} </p> 
+        </div>
+
+        <div class="container container-fluid">
+            @foreach ($data as $val)
+                <div class="box">
+                    <h2>{{ $val -> title }}</h2>
+                    <p style="margin-left: 20px">{{ $val -> article }}</p>
+                </div>
+                <br />
+            @endforeach
+                  
+        </div>
 
 
     </body>

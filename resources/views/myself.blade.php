@@ -16,6 +16,7 @@
 
         <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
 
+        <link rel="stylesheet" href="https://cdn.bootcss.com/twitter-bootstrap/4.3.1/css/bootstrap.min.css" />
 
         <!-- Styles -->
         <style>
@@ -58,7 +59,7 @@
     </head>
     <body>
         <div align="right">
-            <button class="w3-btn w3-round-xlarge w3-khaki" onclick="window.location.href='/'">Back to Main Page</button>
+            <button type="button" class="btn btn-info" onclick="window.location.href='/'">Back to Main Page</button>
         </div>
 
 
