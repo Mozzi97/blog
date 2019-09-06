@@ -110,9 +110,6 @@
 
                 <div class="links">
                     <a href="{{ route('articals') }}">Blog</a>
-                    <!--
-                    <a href="{{ route('articals') }}">Feedback</a>
-                    -->
                     <a href="{{ url('home/test/submitPage') }}">New article</a>
                     <a href="{{ url('home/test/myself') }}">About me</a>
                     <a href="https://github.com/Mozzi97/blog">GitHub</a>
