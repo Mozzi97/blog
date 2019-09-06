@@ -18,15 +18,20 @@
 
         <!-- Styles -->
         <style>
-            html, body {
+            body{
                 background-color: #ffe6e6;
                 background: linear-gradient(#ffe6e6, 80%,white);
                 color: #636b6f;
                 font-family: 'Nunito', sans-serif;
                 font-weight: 200;
-                height: 100vh;
-                margin: 0;
+
+                background-repeat:no-repeat;
+                
             }
+            html{
+                height: 100%;
+            }
+
 
             .box{
                 background-color: rgba(255,255,255,0.4);
@@ -56,6 +61,8 @@
         <div class="container container-fluid">
             @foreach ($data as $val)
                 <div class="box">
+                    <p style="text-align: right;margin-right:10px; "> 
+                        创建于{{ $val -> created_at }} </p>
                     <h2 style="margin-left: 20px">{{ $val -> title }}</h2>
                     <p style="margin-left: 40px">{{ $val -> article }}</p>
                 </div>
