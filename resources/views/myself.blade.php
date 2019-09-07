@@ -31,8 +31,8 @@
             }
 
             .intro img{
-                position:absolute;
-                left:200px;
+                position:relative;
+                left:-200px;
                 top:100px;
                 margin-left:-60px;
             }
@@ -64,9 +64,11 @@
 
 
         <div class="intro" align="middle">
+            <div>
             <picture>
                 <img class="middle" src="{{ URL::asset('images/fish.png') }}" id="fish" />
             </picture>
+            </div>
 
             <h1>Mozzi</h1>
 
