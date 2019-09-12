@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Str;
 
+
 return [
 
     /*
@@ -15,7 +16,7 @@ return [
     |
     */
 
-    'default' => $db_config['connection'],
+    // 'default' => $db_config['connection'],
 
     /*
     |--------------------------------------------------------------------------
@@ -36,7 +37,7 @@ return [
     'connections' => [
 
         'sqlite' => [
-            'driver' => 'pgsql',
+            'driver' => 'sqlite',
             'url' => env('DATABASE_URL'),
             'database' => env('DB_DATABASE', database_path('database.sqlite')),
             'prefix' => '',
