@@ -1,1 +1,1 @@
-Cannot read -C 'nginx_app.conf' (relative to '/app')
+web: vendor/bin/heroku-php-nginx public/
