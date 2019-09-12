@@ -15,7 +15,7 @@
 //     return view('welcome');
 // });
 
-Route::get('/', function () {
+Route::any('/', function () {
     return view('mainPage');
 })->name('mainPage');
 
