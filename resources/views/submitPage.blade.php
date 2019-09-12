@@ -66,7 +66,7 @@
 
         <div class="header"></div>
         <div class="container container-fluid">
-    	<form action="/home/test/mList" method="post">
+    	<form action="/" method="post">
     		<h3>Title: </h3><input class="form-control title" type="text" name="title" value="">
     		<h3>Artical: </h3>
             <textarea class="form-control content" type="text" name="article" value="" style="  height:400px;"></textarea>
