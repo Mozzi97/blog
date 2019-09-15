@@ -6,8 +6,8 @@ use Illuminate\Database\Eloquent\Model;
 
 class Artical extends Model{
 	protected $table = 'samp_db';
-	//protected $primaryKey = 'Artical_id';
-    protected $guarded = ['Title','Artical'];
+	protected $primaryKey = 'Artical_id';
+    protected $guarded = ['Artical_id','Title','Artical'];
     public function freshTimestamp() {
 		return time();
 	}
