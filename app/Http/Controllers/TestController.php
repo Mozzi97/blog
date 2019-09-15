@@ -49,7 +49,7 @@ class TestController extends BaseController
 
         //TestController::getData();
 
-        $db = DB::table('samp_db');
+        $db = DB::table('samp_db_id');
 
         $data = $db -> paginate(5);
 
@@ -71,7 +71,7 @@ class TestController extends BaseController
 
     //获取数据内容
     public function getData(){
-        $db = DB::table('samp_db');
+        $db = DB::table('samp_db_id');
 
         $data = $db -> get();
 
