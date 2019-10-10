@@ -14,8 +14,12 @@ class Authenticate extends Middleware
      */
     protected function redirectTo($request)
     {
-        if (! $request->expectsJson()) {
-            return route('login');
+        $response = $next($request);
+        //If the status is not approved redirect to login 
+        if(Auth::check() && Auth::user()->status_field != 'approved'){
+            Auth::logout();
+            return redirect('/login')->with('erro_login', 'Your error text');
         }
+        return $response;
     }
 }

@@ -21,6 +21,7 @@ class TestController extends BaseController
     }
 
     public function mList(Request $request){
+        $this->middleware('auth:api');
     	$articals = new Artical();
 
     	$result = $articals -> create($request -> all());

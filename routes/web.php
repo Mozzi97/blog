@@ -24,3 +24,6 @@ Route::any('home/test/mList', 'TestController@mList')
 														->name('mList');
 Route::get('home/test/articals', 'TestController@articals')->name('articals');
 Route::get('home/test/myself', 'TestController@aboutMe');
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');

@@ -59,6 +59,10 @@
 
     </head>
     <body>
+        <!--
+        @if (Auth::check()==false) 
+        @endif
+        -->
 
         <div align="right">
             <button type="button" class="btn btn-info" onclick="window.location.href='/'">Back to Main Page</button>
@@ -66,13 +70,21 @@
 
         <div class="header"></div>
         <div class="container container-fluid">
+
     	<form action="{{url('home/test/mList')}}" method="post">
     		<h3>Title: </h3><input class="form-control title" type="text" name="title" value="">
     		<h3>Artical: </h3>
             <textarea class="form-control content" type="text" name="article" value="" style="  height:400px;"></textarea>
     		{{ csrf_field() }}
             <br>
+
+            @if (Auth::check()) 
     		<input class="btn btn-primary" type="submit" value="保存">
+            @endif
+            @if (Auth::check()==false) 
+            <p>登录才可以发布哦！</p>
+            @endif
+            
     	</form>
         </div>
     </body>

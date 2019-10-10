@@ -65,6 +65,7 @@
                         创建于{{ $val -> created_at }} </p>
                     <h2 style="margin-left: 20px">{{ $val -> title }}</h2>
                     <p style="margin-left: 40px">{{ $val -> article }}</p>
+                    <br />
                 </div>
                 <br />
             @endforeach

@@ -62,14 +62,18 @@
             <button type="button" class="btn btn-info" onclick="window.location.href='/'">Back to Main Page</button>
         </div>
 
+        <div class="container-fluid">
 
-        <div class="intro" align="middle">
-            <div>
+        <div class="row" style="margin-top:80px;">
+        <div class="m-auto" align="middle">
             <picture>
                 <img class="middle" src="{{ URL::asset('images/fish.png') }}" id="fish" />
             </picture>
-            </div>
-
+        </div>
+    </div>
+    <br />
+    <div class="row">
+        <div class="m-auto" align="middle" style="margin-top: 30px;">
             <h1>Mozzi</h1>
 
             </br>
@@ -77,6 +81,8 @@
             <p>
                 一条有梦想的咸鱼。现实是骨感的，但还是要拼搏！
             </p>
+        </div>
+        </div>
         </div>
 
 

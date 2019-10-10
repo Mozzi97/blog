@@ -7,7 +7,7 @@ use Illuminate\Database\Eloquent\Model;
 class Artical extends Model{
 	protected $table = 'samp_db';
 	protected $primaryKey = 'Artical_id';
-    protected $guarded = ['Artical_id','Title','Artical'];
+    protected $guarded = ['Title','Artical'];
     public function freshTimestamp() {
 		return time();
 	}
