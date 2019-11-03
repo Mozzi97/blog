@@ -29,7 +29,6 @@
                 height: 100vh;
                 margin: 0;
                 background-repeat:no-repeat;
-                height: 100%;
             }
 
             .intro img{
