@@ -68,7 +68,7 @@
         <div class="row" style="margin-top:80px;">
         <div class="m-auto" align="middle">
             <picture>
-                <img class="middle" src="{{ URL::asset('images/fish.png') }}" id="fish" />
+                <img class="middle" src="{{ URL::asset('images/fish.png') }}" id="saltyfish" height="250" width="350" />
             </picture>
         </div>
     </div>

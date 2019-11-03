@@ -114,13 +114,17 @@
                     <a href="{{ url('home/test/myself') }}">About me</a>
                     <a href="https://github.com/Mozzi97/blog">GitHub</a>
                 </div>
-            
-            <div class="col-sm-8">
-                <h3 class="text-right" style="margin-right: 10px;">友链:</h3>
-                <a class="text-right" href="https://starlite.me/" style="margin-right: -30px; font-size: 20px ">太一</a>
                 <br />
-                <a class="text-right" href="https://glyphicons.com/" style="margin-right: -80px; font-size: 20px">Glyphicons</a>
+            <div class="container-fluid">
+            <div class="row">
+            <div class="col-sm-3 col-md-6 pull-right">
+                <h3>友链:</h3>
+                <a class="text-right" href="https://starlite.me/">太一</a>
+                <br />
+                <a class="text-right" href="https://glyphicons.com/">Glyphicons</a>
             </div>
+            </div>
+        </div>
 
             </div>
             </div>  
