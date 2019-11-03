@@ -115,7 +115,7 @@
                     <a href="https://github.com/Mozzi97/blog">GitHub</a>
                 </div>
             
-            <div class="friend">
+            <div class="col-sm-8">
                 <h3 class="text-right" style="margin-right: 10px;">友链:</h3>
                 <a class="text-right" href="https://starlite.me/" style="margin-right: -30px; font-size: 20px ">太一</a>
                 <br />
