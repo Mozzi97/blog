@@ -2,24 +2,23 @@
 
 namespace App\Http\Middleware;
 
-use Illuminate\Auth\Middleware\Authenticate as Middleware;
+use Closure;
+use Illuminate\Support\Facades\Auth;
 
-class Authenticate extends Middleware
+class Authenticate
 {
     /**
-     * Get the path the user should be redirected to when they are not authenticated.
+     * Handle an incoming request.
      *
      * @param  \Illuminate\Http\Request  $request
-     * @return string
+     * @param  \Closure  $next
+     * @return mixed
      */
-    protected function redirectTo($request)
+    public function handle($request, Closure $next)
     {
-        $response = $next($request);
-        //If the status is not approved redirect to login 
-        if(Auth::check() && Auth::user()->status_field != 'approved'){
-            Auth::logout();
-            return redirect('/login')->with('erro_login', 'Your error text');
+        if (Auth::check()==false) {
+            return redirect('/login')->withErrors('Please login');
         }
-        return $response;
+        return $next($request);
     }
 }

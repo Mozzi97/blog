@@ -15,13 +15,16 @@ class TestController extends BaseController
 {
     use AuthorizesRequests, DispatchesJobs, ValidatesRequests;
 
+    public function __construct(){
+        $this->middleware('auth')->only('mList');
+    }
+
     public function submitPage(){
 
     	return view('submitPage');
     }
 
     public function mList(Request $request){
-        $this->middleware('auth:api');
     	$articals = new Artical();
 
     	$result = $articals -> create($request -> all());

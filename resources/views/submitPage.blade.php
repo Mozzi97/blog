@@ -77,14 +77,15 @@
             <textarea class="form-control content" type="text" name="article" value="" style="  height:400px;"></textarea>
     		{{ csrf_field() }}
             <br>
+            <input class="btn btn-primary" type="submit" value="保存">
 
-            @if (Auth::check()) 
+<!--             @if (Auth::check()) 
     		<input class="btn btn-primary" type="submit" value="保存">
             @endif
             @if (Auth::check()==false) 
             <p>登录才可以发布哦！</p>
-            @endif
-            
+            @endif -->
+
     	</form>
         </div>
     </body>
