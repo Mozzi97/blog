@@ -80,7 +80,7 @@
             .friend{
                 float: right;
                 margin-top: 90px;
-                margin-right: -60px;
+                margin-right: 60px;
                 
             }
 
@@ -111,17 +111,19 @@
                 <div class="links">
                     <a href="{{ route('articals') }}">Blog</a>
                     <a href="{{ url('home/test/submitPage') }}">New article</a>
-                    <a href="{{ url('home/test/myself') }}">About me</a>
+                    <a href="{{ url('home/test/myself') }}">About</a>
                     <a href="https://github.com/Mozzi97/blog">GitHub</a>
                 </div>
                 <br />
-            <div class="container-fluid">
+            <div class="friend">
             <div class="row">
             <div class="col-sm-3 col-md-6 pull-right">
                 <h3>友链:</h3>
-                <a class="text-right" href="https://starlite.me/">太一</a>
-                <br />
-                <a class="text-right" href="https://glyphicons.com/">Glyphicons</a>
+                <ul>
+
+                <li><a class="text-right" href="https://starlite.me/">太一</a></li>
+                <li><a class="text-right" href="https://glyphicons.com/">Glyphicons</a></li>
+                </ul>
             </div>
             </div>
         </div>

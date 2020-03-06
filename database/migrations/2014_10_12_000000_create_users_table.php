@@ -29,6 +29,7 @@ class CreateUsersTable extends Migration
             $table->string('title');
             $table->string('article');
             $table->timestamps();
+            $table->softDeletes();
         });
     }
 

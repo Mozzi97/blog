@@ -3,6 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="csrf-token" content="{{ csrf_token() }}">
 
         <title>Mozzi's blog</title>
 
@@ -64,9 +65,27 @@
                     <p style="text-align: right;margin-right:10px; "> 
                         创建于{{ $val -> created_at }} </p>
                     <h2 style="margin-left: 20px">{{ $val -> title }}</h2>
+                   
                     <p style="margin-left: 40px">{{ $val -> article }}</p>
                     <br />
+                    
+                    <div class="container-fluid">
+                    <div class="row pull-right">
+                    <form action="{{url('home/test/mList')}}" method="post">
+                        <p>id: {{ $val -> Artical_id }}</p>
+                        @csrf
+                        <input class="btn btn-primary" style="margin-right: 10px; float:right;" type="submit" value="修改">
+                    </form>
+                    <form action="{{url('home/test/deleteArtical',['id'=>$val->Artical_id])}}" method="post">
+                        @csrf
+                        <input class="btn btn-primary" style="margin-right: 10px; float:right;" type="submit" value="删除">
+
+                    </form>
+                    </div>
+                    </div>
                 </div>
+                <br />
+                <br />
                 <br />
             @endforeach
             

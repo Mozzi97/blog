@@ -24,7 +24,19 @@ class TestController extends BaseController
     	return view('submitPage');
     }
 
+
+    //提交文章内容
+    //返回主页视窗
     public function mList(Request $request){
+
+        $this->validate($request,[
+            'title' => 'required',
+            'article' => 'required',
+        ],[
+            'title.required' => '请输入标题。',
+            'article.required' => '请输入内容。',
+        ]);
+
     	$articals = new Artical();
 
     	$result = $articals -> create($request -> all());
@@ -37,19 +49,13 @@ class TestController extends BaseController
     	// );
 
     	// dd($result);
-        return view('mainPage');
+
+      return view('mainPage');
 
     }
 
-    // public function articalList(){
-
-    //     return view('articalList');
-    // }
-
-
-
+    //获取数据内容，并分页
     public function articals(){
-    	//展示视图
 
         //TestController::getData();
 
@@ -67,23 +73,48 @@ class TestController extends BaseController
 		
 	}
 
+    //返回“关于我”视窗
     public function aboutMe(){
-        //展示视图
         return view('myself');
         
     }
 
-    //获取数据内容
-    public function getData(){
-        $db = DB::table('samp_db');
+ 
+    // public function getData(){
+    //     $db = DB::table('samp_db');
 
-        $data = $db -> get();
+    //     $data = $db -> get();
 
-        $date = date('Y-m-d H:i:s',time());
+    //     $date = date('Y-m-d H:i:s',time());
 
-        echo $date;
+    //     echo $date;
 
-        return view('mList',['date'=>$date,'data'=>$data]);
+    //     return view('mList',['date'=>$date,'data'=>$data]);
+    // }
+
+    //删除文章
+
+    public function deleteArtical($id){
+       $db = DB::table('samp_db');
+    
+       $data = $db ->where('Artical_id','=',$id)->delete();
+
+      // echo $request;
+      // $student = $db::find(1);//找到id为7的
+      // $bool = $student->delete();//删除
+      // var_dump($bool);
+    
+
+      //$data = $db::delete('delete from vipinfo where vip_ID= ?',[$request->Artical_id]);
+
+      return view('mainPage');
+    }
+
+    //修改文章
+
+    public function reviseArtical(){
+
+      return view('mList');
     }
 
 }

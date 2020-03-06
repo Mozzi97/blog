@@ -59,13 +59,26 @@
 
     </head>
     <body>
-        <!--
-        @if (Auth::check()==false) 
-        @endif
-        -->
+
 
         <div align="right">
             <button type="button" class="btn btn-info" onclick="window.location.href='/'">Back to Main Page</button>
+        </div>
+
+        <div class="container" style="margin-top:10px;">
+          <div class="row">
+            <div class="col-sm-12">
+              @if($errors->count() >0 )
+                <div class="alert alert-danger">
+                  <ul>
+                    @foreach($errors -> all() as $error)
+                      <li>{{$error}}</li>
+                    @endforeach
+                  </ul>
+                </div>
+              @endif
+            </div>
+          </div>
         </div>
 
         <div class="header"></div>
@@ -75,16 +88,19 @@
     		<h3>Title: </h3><input class="form-control title" type="text" name="title" value="">
     		<h3>Artical: </h3>
             <textarea class="form-control content" type="text" name="article" value="" style="  height:400px;"></textarea>
-    		{{ csrf_field() }}
-            <br>
+    		    {{ csrf_field() }}
+            <br/>
             <input class="btn btn-primary" type="submit" value="保存">
-
-<!--             @if (Auth::check()) 
-    		<input class="btn btn-primary" type="submit" value="保存">
-            @endif
-            @if (Auth::check()==false) 
-            <p>登录才可以发布哦！</p>
+<!-- 
+            @if (Auth::check()) 
+    		      <input class="btn btn-primary" type="submit" value="保存">
+            
+            @else
+              <div><b>登录才可以发布哦！</b></div>
             @endif -->
+
+            <br/>
+            <br/>
 
     	</form>
         </div>

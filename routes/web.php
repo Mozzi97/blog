@@ -25,5 +25,8 @@ Route::any('home/test/mList', 'TestController@mList')
 Route::get('home/test/articals', 'TestController@articals')->name('articals');
 Route::get('home/test/myself', 'TestController@aboutMe');
 Auth::routes();
+Route::any('home/test/deleteArtical/{Artical_id}','TestController@deleteArtical');
+
 
 Route::get('/home', 'HomeController@index')->name('home');
+
