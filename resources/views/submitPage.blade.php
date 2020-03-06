@@ -50,6 +50,12 @@
                 height:900px;
                 word-break: break-all;
             }
+
+
+            .container{
+              margin-top: 30px;
+            }
+
         </style>
 
 
@@ -59,10 +65,12 @@
 
     </head>
     <body>
-
-
+        <div class="container container-header">
+        <h1>创作自由 言论自由</h1>
+        <hr />
         <div align="right">
             <button type="button" class="btn btn-info" onclick="window.location.href='/'">Back to Main Page</button>
+        </div>
         </div>
 
         <div class="container" style="margin-top:10px;">

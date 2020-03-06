@@ -26,6 +26,7 @@
                 font-weight: 200;
                 height: 100vh;
                 margin: 0;
+                padding: 0;
             }
             
             .full-height {
@@ -115,21 +116,25 @@
                     <a href="https://github.com/Mozzi97/blog">GitHub</a>
                 </div>
                 <br />
+            <!-- 友链部分 -->
             <div class="friend">
-            <div class="row">
+            <div class="row float-right">
             <div class="col-sm-3 col-md-6 pull-right">
                 <h3>友链:</h3>
                 <ul>
-
                 <li><a class="text-right" href="https://starlite.me/">太一</a></li>
                 <li><a class="text-right" href="https://glyphicons.com/">Glyphicons</a></li>
                 </ul>
             </div>
             </div>
-        </div>
+            </div>
+            <!-- 友链部分结束 -->
 
             </div>
+
             </div>  
+            
         </div>
+
     </body>
 </html>

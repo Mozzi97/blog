@@ -112,9 +112,9 @@ class TestController extends BaseController
 
     //修改文章
 
-    public function reviseArtical(){
+    public function reviseArtical($id){
 
-      return view('mList');
+      return view('submitPage');
     }
 
 }

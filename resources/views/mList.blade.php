@@ -35,7 +35,7 @@
 
 
             .box{
-                background-color: rgba(255,255,255,0.4);
+                background-color: #FFF0F5;
                 border-radius:15px;
             }
 
@@ -46,18 +46,48 @@
                 margin:0 auto;
                 width:1px;
             }
+
+            .header,.container-fluid{
+              margin-top: 30px;
+            }
+/* 
+            .container-fluid{
+              background-color: #FFF0F5;
+            } */
+
+            .navbar-default{
+              
+              text-align: center;
+
+            }
+
+            .footer{
+              margin-bottom: 0px;
+              text-align: center;
+              clear: both;
+              height:60px;
+            }
+
+            input{
+              float:right;
+            }
+            
         </style>
 
         
     </head>
     <body>
+        <div class="container header">
+        <h1>创作自由 言论自由</h1>
+        <hr />
         <div align="right">
             <button type="button" class="btn btn-info" onclick="window.location.href='/'">Back to Main Page</button>
         </div>
-
-        <div class="container container-fluid" id="content">
-            <p>现在时间 {{$date}} </p> 
         </div>
+
+        <!-- <div class="container container-fluid" id="content">
+            <p>现在时间 {{$date}} </p> 
+        </div> -->
 
         <div class="container container-fluid">
             @foreach ($data as $val)
@@ -70,15 +100,14 @@
                     <br />
                     
                     <div class="container-fluid">
-                    <div class="row pull-right">
-                    <form action="{{url('home/test/mList')}}" method="post">
-                        <p>id: {{ $val -> Artical_id }}</p>
+                    <div class="row float-right">
+                    <form action="{{url('home/test/reviseArtical',['id'=>$val->Artical_id])}}" method="post">
                         @csrf
-                        <input class="btn btn-primary" style="margin-right: 10px; float:right;" type="submit" value="修改">
+                        <input class="btn btn-info" style="margin-right: 10px; float:right;" type="submit" value="修改">
                     </form>
                     <form action="{{url('home/test/deleteArtical',['id'=>$val->Artical_id])}}" method="post">
                         @csrf
-                        <input class="btn btn-primary" style="margin-right: 10px; float:right;" type="submit" value="删除">
+                        <input class="btn btn-info" style="margin-right: 10px; float:right;" type="submit" value="删除">
 
                     </form>
                     </div>
@@ -90,9 +119,17 @@
             @endforeach
             
         </div>
+
             <div class="page">      
                 {{ $data -> links() }}
             </div>
+
+
+
+      <div class="footer">
+        <h6>Powered by Laravel, Bootstrap | Author: Mozzi</h6>
+      </div>
+
 
 
     </body>
